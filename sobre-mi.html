@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sobre Mí | Génesis Basanta</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#e5e2e1",
+                        "secondary": "#c7c6c4",
+                        "on-tertiary-container": "#454544",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-tertiary": "#313030",
+                        "surface": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "error-container": "#93000a",
+                        "primary": "#f2ca50",
+                        "on-secondary": "#303130",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-container": "#b5b5b3",
+                        "background": "#131313",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-tint": "#e9c349",
+                        "error": "#ffb4ab",
+                        "inverse-on-surface": "#313030",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary": "#d0cdcd",
+                        "surface-container-highest": "#353534",
+                        "outline": "#99907c",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-secondary-fixed": "#1b1c1b",
+                        "primary-fixed": "#ffe088",
+                        "secondary-fixed": "#e3e2e0",
+                        "primary-container": "#d4af37",
+                        "surface-dim": "#131313",
+                        "tertiary-container": "#b4b2b2",
+                        "surface-container-high": "#2a2a2a",
+                        "on-surface-variant": "#d0c5af",
+                        "on-primary-container": "#554300",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#c7c6c4",
+                        "inverse-primary": "#735c00",
+                        "outline-variant": "#4d4635",
+                        "tertiary-fixed": "#e5e2e1",
+                        "surface-bright": "#3a3939",
+                        "surface-container": "#201f1f",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "surface-variant": "#353534",
+                        "secondary-container": "#464746",
+                        "on-primary-fixed": "#241a00",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-secondary-fixed-variant": "#464746",
+                        "on-primary": "#3c2f00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Newsreader"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Newsreader', serif;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Timeline Progress Animation */
+        #timeline-path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            transition: stroke-dashoffset 0.1s linear;
+        }
+
+        /* Pulse Highlight for Skill Cards */
+        .skill-card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .skill-card-hover:hover {
+            background-color: #201f1f;
+            transform: translateY(-4px);
+            box-shadow: 0 0 20px rgba(242, 202, 80, 0.15);
+            border-color: rgba(242, 202, 80, 0.3);
+        }
+        .skill-card-hover:hover .material-symbols-outlined {
+            animation: pulse-icon 1.5s infinite;
+        }
+        
+        @keyframes pulse-icon {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* Smooth Background Blur Header */
+        header {
+            transition: background-color 0.3s ease;
+        }
+        header.scrolled {
+            background-color: rgba(14, 14, 14, 0.9);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary overflow-x-hidden">
+<header class="fixed top-0 w-full z-50 bg-[#353534]/60 backdrop-blur-xl shadow-[0_20px_40px_rgba(229,226,225,0.06)]" id="main-header">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold text-[#f2ca50] tracking-tighter font-headline">Obsidian Gallery</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-headline uppercase tracking-wider text-[0.75rem] text-[#c7c6c4] hover:text-[#f2ca50] transition-colors" href="#">Inicio</a>
+<a class="font-headline uppercase tracking-wider text-[0.75rem] text-[#f2ca50] font-bold border-b-2 border-[#f2ca50] pb-1" href="#">Sobre Mí</a>
+<a class="font-headline uppercase tracking-wider text-[0.75rem] text-[#c7c6c4] hover:text-[#f2ca50] transition-colors" href="#">Experiencia</a>
+<a class="font-headline uppercase tracking-wider text-[0.75rem] text-[#c7c6c4] hover:text-[#f2ca50] transition-colors" href="#">Proyectos</a>
+<a class="font-headline uppercase tracking-wider text-[0.75rem] text-[#c7c6c4] hover:text-[#f2ca50] transition-colors" href="#">Contacto</a>
+</nav>
+<button class="bg-gradient-to-r from-[#f2ca50] to-[#d4af37] text-[#3c2f00] px-6 py-2 rounded-full font-headline text-[0.75rem] font-bold uppercase tracking-widest hover:scale-95 active:scale-90 transition-transform">Contrátame</button>
+</div>
+</header>
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-20 reveal">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/2">
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter leading-none mb-6">
+                    Mente <span class="text-primary italic font-body font-normal">Estratégica</span>, <br/>
+                    Precisión de Datos.
+                </h1>
+<p class="font-body text-secondary max-w-lg text-lg">Mi nombre es Génesis Basanta, profesional de marketing digital con experiencia en estrategia, contenido y análisis de datos. Soy venezolana y desde hace ocho años resido en Bogotá, Colombia, donde he desarrollado mi carrera colaborando con agencias de publicidad y marcas relevantes, aportando soluciones digitales orientadas a resultados. <br/><br/>Me especializo en la creación de estrategias digitales, desarrollo de contenidos y análisis de performance, combinando creatividad con una visión basada en datos. Disfruto transformar insights en oportunidades de crecimiento, optimizar campañas y generar impacto medible en los objetivos de negocio. <br/><br/>Actualmente continúo fortaleciendo mi perfil en análisis de datos y lenguajes de programación, lo que me ha permitido integrar marketing, tecnología y soluciones digitales para una toma de decisiones más estratégica y eficiente.</p>
+</div>
+<div class="w-full md:w-1/2 relative group">
+<div class="aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-surface-container-low relative z-10 transition-transform duration-500 group-hover:scale-[1.02]">
+<img alt="Génesis Basanta" class="w-full h-full object-cover grayscale contrast-110 brightness-90 group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0uixx9M37Fnqs_vmK2xpHlFsWbvzycuNVAL0Jg-ib1YG1XtJY2x023H0Y3k4_McnxP-pZTR4Hxwsqnra_SlR6eDnB6AUH7Yunbf8eFdWMRmumi5rBVX54mFJmyqwW4GPuPjyr26eb7NbZZD7ayi_JEq8Zqve3zjWqLidjn40_VFnEzR8h1cB59QIlELH1uJK0nmfVndHAetOtLdu74RdNnaCwyB5heP_pFhfMiWlz_HyGGnQqYA1Q8EAd6DL8ET6ifM7a5QiUkXBdOQ"/>
+</div>
+<div class="absolute -bottom-6 -right-6 w-full h-full border border-outline-variant/30 rounded-[1.5rem] -z-10 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
+</div>
+</div>
+</section>
+<div class="bento-grid">
+<!-- Technical Ecosystem -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-low rounded-[1.5rem] p-8 hover:bg-surface-container-high transition-all duration-300 reveal">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+<h2 class="font-headline text-2xl font-bold uppercase tracking-tight text-on-surface">Ecosistema Técnico</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+<div class="flex flex-col gap-2 p-4 rounded-xl bg-surface-container-lowest border border-transparent skill-card-hover cursor-default">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="code">code</span>
+<h3 class="font-headline font-bold">Python</h3>
+<p class="font-body text-sm text-secondary">Manipulación avanzada de datos y automatización.</p>
+</div>
+<div class="flex flex-col gap-2 p-4 rounded-xl bg-surface-container-lowest border border-transparent skill-card-hover cursor-default">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="database">database</span>
+<h3 class="font-headline font-bold">SQL</h3>
+<p class="font-body text-sm text-secondary">Optimización de consultas complejas y arquitectura.</p>
+</div>
+<div class="flex flex-col gap-2 p-4 rounded-xl bg-surface-container-lowest border border-transparent skill-card-hover cursor-default">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="functions">functions</span>
+<h3 class="font-headline font-bold">R</h3>
+<p class="font-body text-sm text-secondary">Modelado estadístico y visualización.</p>
+</div>
+<div class="flex flex-col gap-2 p-4 rounded-xl bg-surface-container-lowest border border-transparent skill-card-hover cursor-default">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="monitoring">monitoring</span>
+<h3 class="font-headline font-bold">Power BI</h3>
+<p class="font-body text-sm text-secondary">Soluciones interactivas de inteligencia de negocios.</p>
+</div>
+<div class="flex flex-col gap-2 p-4 rounded-xl bg-surface-container-lowest border border-transparent skill-card-hover cursor-default">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="insights">insights</span>
+<h3 class="font-headline font-bold">Looker Studio</h3>
+<p class="font-body text-sm text-secondary">Exploración de datos moderna y métricas.</p>
+</div>
+<div class="flex flex-col gap-2 p-4 rounded-xl bg-surface-container-lowest border border-dashed border-outline-variant/30 justify-center items-center text-center opacity-60 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-outline-variant text-2xl" data-icon="add_circle">add_circle</span>
+<span class="font-headline text-xs uppercase text-secondary">Stack en Expansión</span>
+</div>
+</div>
+</div>
+<!-- Linguistic Fluency -->
+<div class="col-span-12 lg:col-span-4 bg-surface-container-low rounded-[1.5rem] p-8 hover:bg-surface-container-high transition-all duration-300 flex flex-col reveal">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary" data-icon="language">language</span>
+<h2 class="font-headline text-2xl font-bold uppercase tracking-tight text-on-surface">Fluidez Lingüística</h2>
+</div>
+<div class="space-y-4 flex-grow">
+<div class="flex justify-between items-center p-4 rounded-xl bg-surface-container-lowest border-l-4 border-primary group transition-all duration-300 hover:pl-6">
+<div>
+<p class="font-headline font-bold text-lg">Inglés</p>
+<p class="font-body text-sm text-secondary">Competencia profesional completa</p>
+</div>
+<div class="flex gap-1">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+</div>
+<div class="flex justify-between items-center p-4 rounded-xl bg-surface-container-lowest border-l-4 border-primary group transition-all duration-300 hover:pl-6">
+<div>
+<p class="font-headline font-bold text-lg">Español</p>
+<p class="font-body text-sm text-secondary">Nativo o Bilingüe</p>
+</div>
+<div class="flex gap-1">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<p class="font-body italic text-secondary text-center">"El lenguaje es la puerta de entrada a diversas perspectivas de datos."</p>
+</div>
+</div>
+<!-- Academic Foundation with Animated Timeline -->
+<div class="col-span-12 bg-surface-container-low rounded-[1.5rem] p-8 hover:bg-surface-container-high transition-all duration-300 reveal">
+<div class="flex items-center gap-3 mb-12">
+<span class="material-symbols-outlined text-primary" data-icon="school">school</span>
+<h2 class="font-headline text-2xl font-bold uppercase tracking-tight text-on-surface">Formación Académica</h2>
+</div>
+<div class="relative px-4" id="timeline-container">
+<!-- Animated Path SVG -->
+<div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-outline-variant/30 -translate-x-1/2">
+<div class="w-px bg-primary absolute top-0 left-0 transition-all duration-150" id="timeline-indicator" style="height: 0%"></div>
+</div>
+<div class="space-y-16">
+<!-- Item 1 -->
+<div class="flex flex-col md:flex-row items-center gap-8 relative timeline-item">
+<div class="w-full md:w-1/2 text-right">
+<h3 class="font-headline text-xl font-bold text-primary">Maestría en Ciencia de Datos</h3>
+<p class="font-body text-lg text-on-surface">Innovation University</p>
+<span class="font-headline text-xs text-secondary uppercase tracking-widest">2021 — 2023</span>
+</div>
+<div class="w-4 h-4 rounded-full bg-primary border-4 border-background absolute left-1/2 -translate-x-1/2 hidden md:block z-10 transition-transform duration-300 hover:scale-150"></div>
+<div class="w-full md:w-1/2">
+<p class="font-body text-secondary text-sm max-w-sm">Especialización en analítica predictiva y aplicaciones de machine learning para el crecimiento empresarial.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col md:flex-row-reverse items-center gap-8 relative timeline-item">
+<div class="w-full md:w-1/2 text-left">
+<h3 class="font-headline text-xl font-bold text-primary">Grado en Economía Estadística</h3>
+<p class="font-body text-lg text-on-surface">Metropolitan Institute</p>
+<span class="font-headline text-xs text-secondary uppercase tracking-widest">2016 — 2020</span>
+</div>
+<div class="w-4 h-4 rounded-full bg-primary border-4 border-background absolute left-1/2 -translate-x-1/2 hidden md:block z-10 transition-transform duration-300 hover:scale-150"></div>
+<div class="w-full md:w-1/2 text-right">
+<p class="font-body text-secondary text-sm max-w-sm ml-auto">Formación fundamental en modelado econométrico, metodologías de recolección de datos y análisis cuantitativo.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-[#0E0E0E] w-full py-12 px-8 bg-gradient-to-t from-[#1C1B1B] to-transparent">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<p class="font-body italic text-sm text-[#c7c6c4]">© 2024 Obsidian Gallery. Todos los derechos reservados.</p>
+<div class="flex gap-8">
+<a class="font-headline text-[0.75rem] uppercase tracking-widest text-[#c7c6c4] hover:text-[#f2ca50] transition-colors opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="font-headline text-[0.75rem] uppercase tracking-widest text-[#c7c6c4] hover:text-[#f2ca50] transition-colors opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="font-headline text-[0.75rem] uppercase tracking-widest text-[#c7c6c4] hover:text-[#f2ca50] transition-colors opacity-80 hover:opacity-100" href="#">Twitter</a>
+<a class="font-headline text-[0.75rem] uppercase tracking-widest text-[#c7c6c4] hover:text-[#f2ca50] transition-colors opacity-80 hover:opacity-100" href="#">Dribbble</a>
+</div>
+</div>
+</footer>
+<script>
+    // Scroll Reveal Intersection Observer
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Header Scroll Effect
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('main-header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // Timeline Scroll Animation
+    const timelineContainer = document.getElementById('timeline-container');
+    const timelineIndicator = document.getElementById('timeline-indicator');
+
+    window.addEventListener('scroll', () => {
+        if (!timelineContainer || !timelineIndicator) return;
+        
+        const rect = timelineContainer.getBoundingClientRect();
+        const viewHeight = window.innerHeight;
+        
+        // Calculate progress based on container position relative to viewport
+        let progress = 0;
+        if (rect.top < viewHeight && rect.bottom > 0) {
+            const containerHeight = rect.height;
+            const scrollInContainer = (viewHeight / 2) - rect.top;
+            progress = Math.max(0, Math.min(100, (scrollInContainer / containerHeight) * 100));
+        } else if (rect.bottom <= 0) {
+            progress = 100;
+        }
+
+        timelineIndicator.style.height = `${progress}%`;
+    });
+</script>
+</body></html>
