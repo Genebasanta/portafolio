@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Newsreader:ital,wght@0,400;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#99907c",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "on-secondary-fixed": "#1b1c1b",
+                        "on-surface-variant": "#d0c5af",
+                        "on-background": "#e5e2e1",
+                        "background": "#131313",
+                        "on-secondary-container": "#b5b5b3",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "error": "#ffb4ab",
+                        "on-primary": "#3c2f00",
+                        "outline-variant": "#4d4635",
+                        "on-tertiary-container": "#454544",
+                        "surface-container-highest": "#353534",
+                        "surface-container": "#201f1f",
+                        "on-primary-fixed": "#241a00",
+                        "primary-fixed": "#ffe088",
+                        "on-tertiary": "#313030",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#e3e2e0",
+                        "inverse-primary": "#735c00",
+                        "surface-tint": "#e9c349",
+                        "primary": "#f2ca50",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "primary-container": "#d4af37",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary": "#c7c6c4",
+                        "surface": "#131313",
+                        "on-surface": "#e5e2e1",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary": "#d0cdcd",
+                        "secondary-container": "#464746",
+                        "on-primary-container": "#554300",
+                        "on-secondary-fixed-variant": "#464746",
+                        "primary-fixed-dim": "#e9c349",
+                        "surface-dim": "#131313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-bright": "#3a3939",
+                        "on-secondary": "#303130",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-container": "#b4b2b2",
+                        "surface-variant": "#353534",
+                        "secondary-fixed-dim": "#c7c6c4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Newsreader"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/70 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<span class="text-xl font-black text-[#f2ca50] tracking-tighter font-headline">Génesis Basanta</span>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-headline tracking-tight text-sm font-medium uppercase text-[#c7c6c4] hover:text-[#f2ca50] transition-colors" href="index.html">Inicio</a>
+<a class="font-headline tracking-tight text-sm font-medium uppercase text-[#c7c6c4] hover:text-[#f2ca50] transition-colors" href="sobre-mi.html">Sobre Mí</a>
+<a class="font-headline tracking-tight text-sm font-medium uppercase text-[#c7c6c4] hover:text-[#f2ca50] transition-colors" href="experiencia.html">Experiencia</a>
+<a class="font-headline tracking-tight text-sm font-medium uppercase text-[#f2ca50] border-b-2 border-[#f2ca50] pb-1" href="proyectos.html">Proyectos</a>
+<a class="font-headline tracking-tight text-sm font-medium uppercase text-[#c7c6c4] hover:text-[#f2ca50] transition-colors" href="contacto.html">Contacto</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline text-[0.75rem] font-bold uppercase tracking-widest px-6 py-2.5 rounded-full scale-95 active:scale-90 transition-transform">Contáctame</button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-16">
+<h1 class="font-headline text-[3.5rem] font-extrabold text-on-surface tracking-tight mb-4 leading-none">
+            Proyectos &amp; <span class="italic font-body font-normal text-secondary">Casos de Éxito</span>
+</h1>
+<p class="font-body italic text-[1.375rem] text-secondary max-w-2xl">
+            Una selección de estrategias digitales donde la precisión del dato se encuentra con la narrativa de marca.
+        </p>
+</header>
+<!-- Projects Bento Grid -->
+<div class="grid grid-cols-1 gap-12">
+<!-- Project 1: TD Talks (Video Strategy) -->
+<div class="group relative overflow-hidden rounded-[2rem] bg-surface-container-low border border-[#4D4635]/20 flex flex-col lg:flex-row shadow-2xl transition-all duration-500 hover:border-primary/30">
+<div class="lg:w-1/2 relative aspect-video overflow-hidden">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="absolute inset-0 w-full h-full opacity-90 group-hover:opacity-100 transition-opacity" frameborder="0" src="https://www.youtube.com/embed/cu8HTGWjF2g?rel=0&amp;modestbranding=1" title="TD Talks"></iframe>
+</div>
+<div class="lg:w-1/2 p-10 md:p-14 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-primary/10 text-primary font-headline text-[0.7rem] px-3 py-1 rounded-full uppercase tracking-widest font-bold">Video Strategy</span>
+<span class="bg-surface-variant text-secondary font-headline text-[0.7rem] px-3 py-1 rounded-full uppercase tracking-widest">Creatividad &amp; Data</span>
+</div>
+<h3 class="font-headline text-3xl font-extrabold text-on-surface mb-6 leading-tight">¿Cómo aportar con datos a la estrategia de creatividad?</h3>
+<p class="font-body text-secondary text-lg mb-8 leading-relaxed line-clamp-3">Conversación sobre cómo la data contribuye a la estrategia y creatividad en grandes marcas, transformando insights en narrativas de impacto.</p>
+<a class="flex items-center text-primary font-headline text-sm font-bold uppercase tracking-widest gap-2 group/btn" href="https://www.youtube.com/watch?v=cu8HTGWjF2g" rel="noopener noreferrer" target="_blank">
+                    Ver Entrevista <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Project 2: F1 Reloaded (Trends/Innovation) -->
+<div class="group relative overflow-hidden rounded-[2rem] bg-surface-container-low border border-[#4D4635]/20 flex flex-col lg:flex-row-reverse shadow-2xl transition-all duration-500 hover:border-primary/30">
+<div class="lg:w-1/2 relative aspect-video overflow-hidden bg-surface-container">
+<img alt="F1 Racing Concept" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqBxfDVJMobgjAnGFEfwoHIu2JtVoY405F7uj-heCUifo9VD8tvOZDCE8GgXdQNUM2JYQ1dy73ERfeb3WJ71G_7001mKb52An6Hc78yFy9-eFLDm8NeUC4Z98Hea4BqchwIln4pul741paDpvXsJgZPmgxWz7XNItjdz4-2QHPYbzyyMQbU7U-wxWBJXgrSPLwiowS7qXUKv8Zbh3E3rETsOS8sXxzXVGBUE-_S_M9-YKOXJcxwTIsjofeqDkhYqHZGVy2Sh4ddpw7"/>
+<div class="absolute inset-0 bg-gradient-to-l from-surface-container-low via-transparent to-transparent opacity-40"></div>
+</div>
+<div class="lg:w-1/2 p-10 md:p-14 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-primary/10 text-primary font-headline text-[0.7rem] px-3 py-1 rounded-full uppercase tracking-widest font-bold">Innovation</span>
+<span class="bg-surface-variant text-secondary font-headline text-[0.7rem] px-3 py-1 rounded-full uppercase tracking-widest">Sports Trends</span>
+</div>
+<h3 class="font-headline text-3xl font-extrabold text-on-surface mb-6 leading-tight italic font-body">F1 Reloaded: La carrera digital en la cultura pop</h3>
+<p class="font-body text-secondary text-lg mb-8 leading-relaxed line-clamp-3">Análisis de cómo la Fórmula 1 se adapta a las tendencias digitales sin perder su identidad, conectando con nuevas audiencias globales.</p>
+<a class="flex items-center text-primary font-headline text-sm font-bold uppercase tracking-widest gap-2 group/btn" href="https://www.linkedin.com/posts/burson_f1-reloaded-activity-7345869497767002112-JcCw?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAB83dfgBzmkonP51B4OEEYWgmsGUIi7pyXk" rel="noopener noreferrer" target="_blank">
+                    Explorar Caso <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Project 3: Gaming & eSports -->
+<div class="group relative overflow-hidden rounded-[2rem] bg-surface-container-low border border-[#4D4635]/20 flex flex-col lg:flex-row shadow-2xl transition-all duration-500 hover:border-primary/30">
+<div class="lg:w-1/2 relative aspect-video overflow-hidden bg-surface-container">
+<img alt="eSports and Streaming Visualization" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkiEbsN1mdacdeW4ZquLz9eW4iw--L3knTYtNdJ16wSpza8Ux6dIlRQSWRK43DktIXmns_WpLMe9Utx_POxFf6dIJydOYOdycF30ZBdcJSCOyPiAcn3TT40i6a9xTWIf1DnaeoIeb031XPLrBcWp-pIu18ihldkXkYbNfOY3LVVK7txBJBAwDrNs5gzR8R31ZiZQ7rSL0hs-vrMrf7d5jK9zQdPZAc0IqJyVGL05pW_KQSK93l4aE2s8ikJahy1ZjpS9WO5dzH6A2-"/>
+</div>
+<div class="lg:w-1/2 p-10 md:p-14 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-primary/10 text-primary font-headline text-[0.7rem] px-3 py-1 rounded-full uppercase tracking-widest font-bold">Research</span>
+<span class="bg-surface-variant text-secondary font-headline text-[0.7rem] px-3 py-1 rounded-full uppercase tracking-widest">Gaming &amp; Streaming</span>
+</div>
+<h3 class="font-headline text-3xl font-extrabold text-on-surface mb-6 leading-tight">Impacto del Gaming en la comunicación digital</h3>
+<p class="font-body text-secondary text-lg mb-8 leading-relaxed line-clamp-3">Investigación sobre comunidades conversacionales y el crecimiento del streaming móvil en América Latina durante el 2024.</p>
+<div class="flex flex-wrap gap-6">
+<a class="flex items-center text-primary font-headline text-sm font-bold uppercase tracking-widest gap-2 group/btn" href="https://www.linkedin.com/in/g%C3%A9nesis-gabriela-basanta-morales/overlay/Project/189847321/treasury/?profileId=ACoAAB83dfgBzmkonP51B4OEEYWgmsGUIi7pyXk" rel="noopener noreferrer" target="_blank">
+                        Explorar Juego <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">sports_esports</span>
+</a>
+<a class="flex items-center text-secondary/70 hover:text-primary font-headline text-[0.7rem] font-bold uppercase tracking-widest gap-2 transition-colors" href="#" rel="noopener noreferrer" target="_blank">
+                        Detalles <span class="material-symbols-outlined text-xs">info</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project 4: Equidad de Género (Semana) -->
+<div class="group relative overflow-hidden rounded-[2rem] bg-surface-container-low border border-[#4D4635]/20 flex flex-col lg:flex-row-reverse shadow-2xl transition-all duration-500 hover:border-primary/30">
+<div class="lg:w-1/2 relative aspect-video overflow-hidden bg-surface-container">
+<img alt="Women Leaders Discussion" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy-_LEk4Oa80up6O0ihuqhi5JdTa85CJoRG2z-bMCJD2PBoBCXgcquiWXTovlWtMI0-OcNUiCvAwDv9UjkXzCeC-cdmT8216sAy0AO0ktwXkH1a1y03brnl4sOTjtmfhDTNN_fyuVvYTxvGNzOC_KGbvGcaX6LHOLmZv71T0w_WPv9CMVJDN0AkKTdZHXoS7HId-giC2nttbCoAMs21HMkZkKfW1gwFUEYTPbXusKrTLNddVqxnTnt9yCdG4ZM62k2a7xuzCB37cui"/>
+</div>
+<div class="lg:w-1/2 p-10 md:p-14 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-primary/10 text-primary font-headline text-[0.7rem] px-3 py-1 rounded-full uppercase tracking-widest font-bold">Social Research</span>
+<span class="bg-surface-variant text-secondary font-headline text-[0.7rem] px-3 py-1 rounded-full uppercase tracking-widest">Revista Semana</span>
+</div>
+<h3 class="font-headline text-3xl font-extrabold text-on-surface mb-6 leading-tight italic font-body">Equidad de Género: Debate en plataformas digitales</h3>
+<p class="font-body text-secondary text-lg mb-8 leading-relaxed line-clamp-3">Análisis sobre el interés creciente por la equidad de género en Colombia, basado en la escucha social activa.</p>
+<a class="flex items-center text-primary font-headline text-sm font-bold uppercase tracking-widest gap-2 group/btn" href="https://www.semana.com/mujeres/articulo/las-discusiones-en-redes-sociales-evidencian-un-creciente-interes-por-la-equidad-de-genero-en-colombia/202411/" rel="noopener noreferrer" target="_blank">
+                    Leer Artículo <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Project 5: Monitoreo Paro Nacional (Social Listening) -->
+<div class="group relative overflow-hidden rounded-[2rem] bg-surface-container-low border border-[#4D4635]/20 flex flex-col lg:flex-row shadow-2xl transition-all duration-500 hover:border-primary/30">
+<div class="lg:w-1/2 relative aspect-video overflow-hidden bg-surface-container">
+<img alt="Data Visualization Network" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_5VEvXRH7wsWu9G-n_2HvI4YFcPIeisMyGHiX4mujsHNE57JKJpqK51w6u-qnCpjEgMgUoqPEdhvAb-KOO2bFG8bAnE_x6pJTK0xw5NIR_cSsgcjQWLViw2nInUAy7E5C1HzYNR-C1bhWeb9v0ZluAlnZNiqTRu_K8Q-YIWh7YzTfyuARNtBpKib577zSNrZ08lH5ZOj7xy_P7nBlwP2f1qEmxVsAQArds3AfyhlK7Sv4bPJYG_2JcToiMdE1Y54NbTPLD-xgm6Rx"/>
+</div>
+<div class="lg:w-1/2 p-10 md:p-14 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-primary/10 text-primary font-headline text-[0.7rem] px-3 py-1 rounded-full uppercase tracking-widest font-bold">Social Listening</span>
+<span class="bg-surface-variant text-secondary font-headline text-[0.7rem] px-3 py-1 rounded-full uppercase tracking-widest">Crisis Analysis</span>
+</div>
+<h3 class="font-headline text-3xl font-extrabold text-on-surface mb-6 leading-tight">Monitoreo Paro Nacional Colombia</h3>
+<p class="font-body text-secondary text-lg mb-8 leading-relaxed line-clamp-3">Análisis de sentimientos y tópicos en tiempo real durante eventos sociales de alto impacto en plataformas digitales.</p>
+<a class="flex items-center text-primary font-headline text-sm font-bold uppercase tracking-widest gap-2 group/btn" href="https://www.linkedin.com/in/g%C3%A9nesis-gabriela-basanta-morales/overlay/Project/928966112/treasury/?profileId=ACoAAB83dfgBzmkonP51B4OEEYWgmsGUIi7pyXk" rel="noopener noreferrer" target="_blank">
+                    Ver Caso de Estudio <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Project 6: Social Media Projection Calculator -->
+<div class="group relative overflow-hidden rounded-[2rem] bg-surface-container-low border border-[#4D4635]/20 flex flex-col lg:flex-row-reverse shadow-2xl transition-all duration-500 hover:border-primary/30">
+<div class="lg:w-1/2 relative aspect-video overflow-hidden bg-surface-container">
+<img alt="Data Analytics Projection" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-all duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtv3W6yN7L0R3mKzZ_1W-ZpD_D-n_8E7-f_M1D7u-B_0N8C-q_1_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0"/>
+<div class="absolute inset-0 bg-gradient-to-l from-surface-container-low via-transparent to-transparent opacity-40"></div>
+</div>
+<div class="lg:w-1/2 p-10 md:p-14 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-primary/10 text-primary font-headline text-[0.7rem] px-3 py-1 rounded-full uppercase tracking-widest font-bold">Data Product</span>
+<span class="bg-surface-variant text-secondary font-headline text-[0.7rem] px-3 py-1 rounded-full uppercase tracking-widest">Analytics</span>
+</div>
+<h3 class="font-headline text-3xl font-extrabold text-on-surface mb-2 leading-tight">Calculadora de Proyecciones</h3>
+<p class="font-headline text-sm font-bold text-primary uppercase tracking-widest mb-6">Social Media Growth Engine</p>
+<p class="font-body text-secondary text-lg mb-8 leading-relaxed line-clamp-3">
+            Desarrollo de una herramienta interactiva que utiliza datos históricos vía API para modelar proyecciones de crecimiento de audiencias digitales.
+        </p>
+<a class="flex items-center text-primary font-headline text-sm font-bold uppercase tracking-widest gap-2 group/btn" href="https://caculadora-de-proyecciones-6f38.vercel.app/" rel="noopener noreferrer" target="_blank">
+            PROBAR CALCULADORA <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">rocket_launch</span>
+</a>
+</div>
+</div></div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#4D4635]/15 bg-[#0E0E0E]">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 gap-6 w-full max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start">
+<span class="text-lg font-bold text-[#f2ca50] font-headline">Génesis Basanta</span>
+<p class="font-body italic text-base text-[#c7c6c4] mt-1">© 2024 Génesis Basanta. Estrategia y Datos.</p>
+</div>
+<div class="flex gap-10">
+<a class="font-body italic text-base text-[#c7c6c4] hover:text-[#f2ca50] transition-colors opacity-80 hover:opacity-100" href="https://www.linkedin.com/in/g%C3%A9nesis-gabriela-basanta-morales/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a class="font-body italic text-base text-[#c7c6c4] hover:text-[#f2ca50] transition-colors opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="font-body italic text-base text-[#c7c6c4] hover:text-[#f2ca50] transition-colors opacity-80 hover:opacity-100" href="#">Email</a>
+</div>
+<div class="flex items-center gap-2 text-[#c7c6c4] font-label text-xs uppercase tracking-tighter">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Disponible para proyectos
+        </div>
+</div>
+</footer>
+</body></html>
